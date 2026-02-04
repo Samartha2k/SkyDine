@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKY DINE | The Apex of Taste</title>
+    <meta name="description" content="A premier rooftop dining experience." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              display: ['"Bodoni Moda"', 'serif'],
+              sans: ['"Jost"', 'sans-serif'],
+            },
+            colors: {
+              void: '#0a0a0a',
+              cream: '#eaddcf',
+              rust: '#8c3a28',
+              charcoal: '#1c1c1c',
+            },
+            backgroundImage: {
+              'noise': "url('data:image/svg+xml,%3Csvg viewBox=\"0 0 200 200\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cfilter id=\"noiseFilter\"%3E%3CfeTurbulence type=\"fractalNoise\" baseFrequency=\"0.65\" numOctaves=\"3\" stitchTiles=\"stitch\"/%3E%3C/filter%3E%3Crect width=\"100%25\" height=\"100%25\" filter=\"url(%23noiseFilter)\" opacity=\"0.05\"/%3E%3C/svg%3E')",
+            },
+            animation: {
+              'scroll-text': 'scrollText 20s linear infinite',
+              'fade-in-up': 'fadeInUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+              'scale-reveal': 'scaleReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            },
+            keyframes: {
+              scrollText: {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-100%)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scaleReveal: {
+                '0%': { transform: 'scale(1.2)' },
+                '100%': { transform: 'scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #0a0a0a;
+        color: #eaddcf;
+        cursor: none; /* Hide default cursor for custom one */
+      }
+
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0a0a0a;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #8c3a28;
+      }
+
+      /* Cursor Styles */
+      .cursor-dot,
+      .cursor-outline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        z-index: 9999;
+        pointer-events: none;
+      }
+
+      .cursor-dot {
+        width: 8px;
+        height: 8px;
+        background-color: #eaddcf;
+      }
+
+      .cursor-outline {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(234, 221, 207, 0.5);
+        transition: width 0.2s, height 0.2s, background-color 0.2s;
+      }
+
+      body:hover .cursor-outline.hovered {
+        width: 80px;
+        height: 80px;
+        background-color: rgba(234, 221, 207, 0.1);
+        border-color: #eaddcf;
+        backdrop-filter: invert(1);
+      }
+
+      /* Selection */
+      ::selection {
+        background: #8c3a28;
+        color: #eaddcf;
+      }
+      
+      .blend-difference {
+        mix-blend-mode: difference;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.2.0,react-dom@18.2.0",
+    "framer-motion": "https://esm.sh/framer-motion@10.16.4?deps=react@18.2.0,react-dom@18.2.0",
+    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.2.0",
+    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
+    "three": "https://esm.sh/three@0.160.0",
+    "three/": "https://esm.sh/three@0.160.0/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <!-- Preloader -->
+    <div id="preloader">
+      <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" role="img" aria-label="Loading...">
+        <clipPath id="pan-clip">
+          <rect rx="12" ry="14" x="4" y="52" width="68" height="28" />
+        </clipPath>
+        <defs>
+          <linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#000" />
+            <stop offset="100%" stop-color="#fff" />
+          </linearGradient>
+          <mask id="pl-mask">
+            <rect x="0" y="0" width="88" height="80" fill="url(#pl-grad)" />
+          </mask>
+        </defs>
+        <g fill="#eaddcf">
+          <g fill="none" stroke-dasharray="20 221" stroke-dashoffset="20" stroke-linecap="round" stroke-width="4">
+            <g stroke="#eaddcf">
+              <circle class="pl__ring" cx="44" cy="40" r="35" transform="rotate(90,44,40)" />
+            </g>
+            <g stroke="#8c3a28" mask="url(#pl-mask)">
+              <circle class="pl__ring" cx="44" cy="40" r="35" transform="rotate(90,44,40)" />
+            </g>
+          </g>
+          <g fill="rgba(234,221,207,0)">
+            <g class="pl__drop pl__drop--1">
+              <circle class="pl__drop-inner" cx="13" cy="60" r="2" />
+            </g>
+            <g class="pl__drop pl__drop--2">
+              <circle class="pl__drop-inner" cx="13" cy="60" r="2" />
+            </g>
+            <g class="pl__drop pl__drop--3">
+              <circle class="pl__drop-inner" cx="67" cy="72" r="2" />
+            </g>
+            <g class="pl__drop pl__drop--4">
+              <circle class="pl__drop-inner" cx="67" cy="72" r="2" />
+            </g>
+            <g class="pl__drop pl__drop--5">
+              <circle class="pl__drop-inner" cx="67" cy="72" r="2" />
+            </g>
+          </g>
+          <g class="pl__pan">
+            <rect rx="2" ry="2" x="4" y="66" width="68" height="14" clip-path="url(#pan-clip)" id="pan" />
+            <rect rx="2" ry="2" x="76" y="66" width="48" height="7" />
+          </g>
+
+        </g>
+      </svg>
+    </div>
+    
+    <div id="root"></div>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <script>
+      const cursorDot = document.querySelector('.cursor-dot');
+      const cursorOutline = document.querySelector('.cursor-outline');
+
+      window.addEventListener('mousemove', (e) => {
+        const posX = e.clientX;
+        const posY = e.clientY;
+
+        cursorDot.style.left = `${posX}px`;
+        cursorDot.style.top = `${posY}px`;
+
+        cursorOutline.animate({
+          left: `${posX}px`,
+          top: `${posY}px`
+        }, { duration: 500, fill: "forwards" });
+      });
+
+      document.body.addEventListener('mouseover', (e) => {
+        if (e.target.closest('a') || e.target.closest('button') || e.target.closest('.interactive')) {
+          cursorOutline.classList.add('hovered');
+        } else {
+          cursorOutline.classList.remove('hovered');
+        }
+      });
+
+      // Hide preloader when window loads
+      window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+          setTimeout(() => {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+              preloader.style.display = 'none';
+            }, 500); // Wait for transition to finish
+          }, 800); // Minimum view time
+        }
+      });
+    </script>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
