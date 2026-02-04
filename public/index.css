@@ -202,8 +202,8 @@ html, body {
   50%, to { transform: translate(-6px,0); }
 }
 @keyframes drop-1-inner {
-  from, 30% { fill: #8c3a28; transform: translate(0,0); } /* Rust color */
-  50%, to { fill: rgba(140,58,40,0); transform: translate(0,-27px); }
+  from, 30% { fill: #D32F2F; transform: translate(0,0); } /* Rust color */
+  50%, to { fill: rgba(211,47,47,0); transform: translate(0,-27px); }
 }
 
 @keyframes drop-2 {
@@ -212,8 +212,8 @@ html, body {
   50%, to { transform: translate(-8px,0); }
 }
 @keyframes drop-2-inner {
-  from, 30% { fill: #8c3a28; transform: translate(0,0); }
-  50%, to { fill: rgba(140,58,40,0); transform: translate(0,-9px); }
+  from, 30% { fill: #D32F2F; transform: translate(0,0); }
+  50%, to { fill: rgba(211,47,47,0); transform: translate(0,-9px); }
 }
 
 @keyframes drop-3 {
@@ -222,8 +222,8 @@ html, body {
   98%, to { transform: translate(-24px,0); }
 }
 @keyframes drop-3-inner {
-  from, 78% { fill: #8c3a28; transform: translate(0,0); }
-  98%, to { fill: rgba(140,58,40,0); transform: translate(0,-28px); }
+  from, 78% { fill: #D32F2F; transform: translate(0,0); }
+  98%, to { fill: rgba(211,47,47,0); transform: translate(0,-28px); }
 }
 
 @keyframes drop-4 {
@@ -232,8 +232,8 @@ html, body {
   98%, to { transform: translate(-8px,0); }
 }
 @keyframes drop-4-inner {
-  from, 78% { fill: #8c3a28; transform: translate(0,0); }
-  98%, to { fill: rgba(140,58,40,0); transform: translate(0,-36px); }
+  from, 78% { fill: #D32F2F; transform: translate(0,0); }
+  98%, to { fill: rgba(211,47,47,0); transform: translate(0,-36px); }
 }
 
 @keyframes drop-5 {
@@ -242,8 +242,8 @@ html, body {
   98%, to { transform: translate(8px,0); }
 }
 @keyframes drop-5-inner {
-  from, 78% { fill: #8c3a28; transform: translate(0,0); }
-  98%, to { fill: rgba(140,58,40,0); transform: translate(0,-32px); }
+  from, 78% { fill: #D32F2F; transform: translate(0,0); }
+  98%, to { fill: rgba(211,47,47,0); transform: translate(0,-32px); }
 }
 
 @keyframes flip-ring {

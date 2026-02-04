@@ -19,8 +19,8 @@
             },
             colors: {
               void: '#0a0a0a',
-              cream: '#eaddcf',
-              rust: '#8c3a28',
+              cream: '#F8F9FA',
+              rust: '#D32F2F',
               charcoal: '#1c1c1c',
             },
             backgroundImage: {
@@ -64,7 +64,7 @@
         background: #0a0a0a;
       }
       ::-webkit-scrollbar-thumb {
-        background: #8c3a28;
+        background: #D32F2F;
       }
 
       /* Cursor Styles */
@@ -82,28 +82,28 @@
       .cursor-dot {
         width: 8px;
         height: 8px;
-        background-color: #eaddcf;
+        background-color: #F8F9FA;
       }
 
       .cursor-outline {
         width: 40px;
         height: 40px;
-        border: 1px solid rgba(234, 221, 207, 0.5);
+        border: 1px solid rgba(248, 249, 250, 0.5);
         transition: width 0.2s, height 0.2s, background-color 0.2s;
       }
 
       body:hover .cursor-outline.hovered {
         width: 80px;
         height: 80px;
-        background-color: rgba(234, 221, 207, 0.1);
-        border-color: #eaddcf;
+        background-color: rgba(248, 249, 250, 0.1);
+        border-color: #F8F9FA;
         backdrop-filter: invert(1);
       }
 
       /* Selection */
       ::selection {
-        background: #8c3a28;
-        color: #eaddcf;
+        background: #D32F2F;
+        color: #F8F9FA;
       }
       
       .blend-difference {
@@ -144,12 +144,12 @@
             <rect x="0" y="0" width="88" height="80" fill="url(#pl-grad)" />
           </mask>
         </defs>
-        <g fill="#eaddcf">
+        <g fill="#F8F9FA">
           <g fill="none" stroke-dasharray="20 221" stroke-dashoffset="20" stroke-linecap="round" stroke-width="4">
-            <g stroke="#eaddcf">
+            <g stroke="#F8F9FA">
               <circle class="pl__ring" cx="44" cy="40" r="35" transform="rotate(90,44,40)" />
             </g>
-            <g stroke="#8c3a28" mask="url(#pl-mask)">
+            <g stroke="#D32F2F" mask="url(#pl-mask)">
               <circle class="pl__ring" cx="44" cy="40" r="35" transform="rotate(90,44,40)" />
             </g>
           </g>

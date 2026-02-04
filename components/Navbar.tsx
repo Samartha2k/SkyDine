@@ -46,12 +46,7 @@ const Navbar: React.FC = () => {
         
         {/* Logo */}
         <Link to="/" className="interactive relative z-50 group">
-          <div className="flex flex-col">
-            <span className="font-display font-bold text-3xl tracking-widest group-hover:text-rust transition-colors duration-500">
-              SKY DINE
-            </span>
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] opacity-60">Est. 2024</span>
-          </div>
+          <img src="/images/logo.png" alt="Sky Dine Logo" className="h-16 w-auto object-contain" />
         </Link>
 
         <div className="flex items-center gap-8">
