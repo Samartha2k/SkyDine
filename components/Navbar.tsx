@@ -42,24 +42,30 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-6 md:px-12 md:py-8 mix-blend-difference text-cream">
+      <nav className="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 py-6 md:px-12 md:py-8 text-cream">
         
         {/* Logo */}
-        <Link to="/" className="interactive relative z-50 group">
+        <Link to="/" className="interactive group flex items-center gap-4">
           <img src="/images/logo.png" alt="Sky Dine Logo" className="h-16 w-auto object-contain" />
+          <div className="hidden md:flex flex-col mix-blend-difference">
+            <span className="font-display font-bold text-3xl tracking-widest group-hover:text-rust transition-colors duration-500 text-white">
+              SKY DINE
+            </span>
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] opacity-80 text-white">Est. 2024</span>
+          </div>
         </Link>
 
-        <div className="flex items-center gap-8">
-           <Link to="/order-online" className="interactive hidden md:flex items-center gap-2 font-sans text-xs uppercase tracking-widest hover:text-rust transition-colors border border-cream/20 px-6 py-3 rounded-full hover:bg-cream hover:text-void hover:border-cream">
+        <div className="flex items-center gap-8 mix-blend-difference">
+           <Link to="/order-online" className="interactive hidden md:flex items-center gap-2 font-sans text-xs uppercase tracking-widest hover:text-rust transition-colors border border-white/20 px-6 py-3 rounded-full hover:bg-white hover:text-void hover:border-white text-white">
              <span>Order Online</span>
            </Link>
            
            <button 
             onClick={() => setIsOpen(true)} 
-            className="interactive flex items-center gap-4 group"
+            className="interactive flex items-center gap-4 group text-white"
           >
             <span className="hidden md:block font-sans text-xs uppercase tracking-[0.2em] group-hover:text-rust transition-colors">Menu</span>
-            <div className="w-12 h-12 bg-cream/10 backdrop-blur-md rounded-full flex items-center justify-center group-hover:bg-rust group-hover:text-void transition-all duration-300 border border-cream/20">
+            <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center group-hover:bg-rust group-hover:text-void transition-all duration-300 border border-white/20">
               <MenuIcon className="w-5 h-5" />
             </div>
           </button>
