@@ -47,7 +47,7 @@ const Home: React.FC = () => {
                initial={{ opacity: 0, y: 30 }}
                animate={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.8, delay: 0.4 }}
-               className="font-display text-5xl md:text-8xl lg:text-9xl leading-[0.9] text-cream mb-6 lg:mb-8"
+                className="font-display text-4xl sm:text-5xl md:text-8xl lg:text-9xl leading-[0.9] text-cream mb-6 lg:mb-8"
              >
                Taste The <br/>
                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cream via-cream to-cream/50 italic pr-4">Sublime</span>
@@ -57,7 +57,7 @@ const Home: React.FC = () => {
                initial={{ opacity: 0, y: 30 }}
                animate={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.8, delay: 0.6 }}
-               className="font-sans text-cream/70 text-base lg:text-lg leading-relaxed max-w-md mb-8 lg:mb-12 border-l border-white/10 pl-6"
+                className="font-sans text-cream/70 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md mb-8 lg:mb-12 border-l border-white/10 pl-4 sm:pl-6"
              >
                Experience the alchemy of flavors at the apex of the city. A sanctuary where North Indian heritage meets Pan-Asian innovation.
              </motion.p>
@@ -66,24 +66,24 @@ const Home: React.FC = () => {
                initial={{ opacity: 0, y: 30 }}
                animate={{ opacity: 1, y: 0 }}
                transition={{ duration: 0.8, delay: 0.8 }}
-               className="flex flex-row gap-4 lg:gap-6"
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6"
              >
-               <Link to="/menu" className="interactive group relative overflow-hidden px-6 lg:px-8 py-3 lg:py-4 bg-rust text-void font-sans text-[10px] lg:text-xs font-bold uppercase tracking-widest transition-all hover:bg-cream hover:text-void flex items-center justify-center">
-                 <span className="relative z-10 flex items-center gap-2">View Menu <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"/></span>
+                <Link to="/menu" className="interactive group relative overflow-hidden px-5 sm:px-6 lg:px-8 py-3 lg:py-4 bg-rust text-void font-sans text-[10px] lg:text-xs font-bold uppercase tracking-widest transition-all hover:bg-cream hover:text-void flex items-center justify-center w-full sm:w-auto">
+                  <span className="relative z-10 flex items-center gap-2">View Menu <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"/></span>
                </Link>
-               <Link to="/contact" className="interactive group px-6 lg:px-8 py-3 lg:py-4 border border-cream/20 text-cream font-sans text-[10px] lg:text-xs font-bold uppercase tracking-widest hover:border-rust hover:text-rust transition-colors flex items-center justify-center">
-                 Book A Table
-               </Link>
+                <Link to="/contact" className="interactive group px-5 sm:px-6 lg:px-8 py-3 lg:py-4 border border-cream/20 text-cream font-sans text-[10px] lg:text-xs font-bold uppercase tracking-widest hover:border-rust hover:text-rust transition-colors flex items-center justify-center w-full sm:w-auto">
+                  Book A Table
+                </Link>
              </motion.div>
           </div>
 
           {/* Right Visual: Levitation & Smoke */}
-          <div className="lg:col-span-6 relative h-[40vh] lg:h-[80vh] flex items-center justify-center order-2">
+          <div className="lg:col-span-6 relative h-[35vh] sm:h-[40vh] lg:h-[80vh] flex items-center justify-center order-2">
             
             {/* Spinning Circle Back */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-               <div className="w-[300px] h-[300px] md:w-[600px] md:h-[600px] border border-cream/5 rounded-full animate-[spin_60s_linear_infinite]"></div>
-               <div className="absolute w-[220px] h-[220px] md:w-[450px] md:h-[450px] border border-dashed border-rust/20 rounded-full animate-[spin_40s_linear_infinite_reverse]"></div>
+               <div className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[600px] md:h-[600px] border border-cream/5 rounded-full animate-[spin_60s_linear_infinite]"></div>
+               <div className="absolute w-[150px] h-[150px] sm:w-[220px] sm:h-[220px] md:w-[450px] md:h-[450px] border border-dashed border-rust/20 rounded-full animate-[spin_40s_linear_infinite_reverse]"></div>
             </div>
 
             {/* The Dish Image */}
@@ -134,7 +134,7 @@ const Home: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2, duration: 1 }}
-          className="absolute bottom-4 lg:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 z-20 hidden md:flex"
+          className="absolute bottom-4 lg:bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 z-20"
         >
           <span className="font-sans text-[10px] uppercase tracking-[0.3em] text-cream/40">Scroll</span>
           <ChevronDown className="w-4 h-4 text-rust animate-bounce" />
@@ -156,12 +156,12 @@ const Home: React.FC = () => {
       </div>
 
       {/* 3. The Concept: Editorial Layout */}
-      <section className="py-32 px-6">
+      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6">
         <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
           
           <div className="lg:col-span-4 lg:sticky lg:top-32 h-fit">
             <span className="font-sans text-xs text-rust uppercase tracking-[0.3em] block mb-6">01 — The Concept</span>
-            <h2 className="font-display text-5xl md:text-7xl mb-8 leading-tight">
+            <h2 className="font-display text-3xl sm:text-5xl md:text-7xl mb-8 leading-tight">
               Elevated <br/><span className="italic text-cream/50">Perspective</span>
             </h2>
             <p className="font-sans text-cream/60 leading-relaxed mb-12 max-w-sm">
@@ -204,14 +204,14 @@ const Home: React.FC = () => {
       </section>
 
       {/* 4. Menu Preview: Large Typography */}
-      <section className="py-32 bg-cream text-void px-6 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 bg-cream text-void px-4 sm:px-6 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-[50vw] h-[50vw] bg-rust/10 rounded-full blur-[120px] pointer-events-none"></div>
         
         <div className="max-w-[1920px] mx-auto relative z-10">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 border-b border-void/10 pb-8">
              <div>
                <span className="font-sans text-xs text-rust uppercase tracking-[0.3em] block mb-4">Selections</span>
-               <h2 className="font-display text-6xl md:text-9xl text-void">Selected <br/> Plates</h2>
+               <h2 className="font-display text-4xl sm:text-6xl md:text-9xl text-void">Selected <br/> Plates</h2>
              </div>
              <Link to="/menu" className="interactive hidden md:block px-8 py-3 border border-void text-void hover:bg-void hover:text-cream transition-colors font-sans text-xs uppercase tracking-widest">
                Full Menu
@@ -240,13 +240,13 @@ const Home: React.FC = () => {
       </section>
 
       {/* 5. Reviews: Prominent Single Review */}
-      <section className="py-32 px-6 flex flex-col items-center text-center bg-void relative border-t border-cream/5">
+      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 flex flex-col items-center text-center bg-void relative border-t border-cream/5">
          <div className="absolute inset-0 bg-noise opacity-[0.05]"></div>
          <div className="w-16 h-1 bg-rust mb-12"></div>
          
          <span className="font-sans text-xs text-rust uppercase tracking-[0.3em] mb-8 block">Guest Impressions</span>
 
-         <blockquote className="font-display text-3xl md:text-5xl max-w-4xl leading-snug mb-12 text-cream">
+         <blockquote className="font-display text-xl sm:text-3xl md:text-5xl max-w-4xl leading-snug mb-12 text-cream">
            "{REVIEWS[0].text}"
          </blockquote>
          
@@ -265,14 +265,14 @@ const Home: React.FC = () => {
       </section>
 
       {/* 6. Contact Preview Section */}
-      <section className="py-32 px-6 bg-cream/5 relative overflow-hidden">
+      <section className="py-16 sm:py-24 md:py-32 px-4 sm:px-6 bg-cream/5 relative overflow-hidden">
         {/* Decorative background element */}
         <div className="absolute top-0 left-0 w-[40vw] h-[40vw] bg-rust/5 rounded-full blur-[100px] pointer-events-none"></div>
 
         <div className="max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
             <div className="lg:pl-24">
                 <span className="font-sans text-xs text-rust uppercase tracking-[0.3em] mb-6 block">Plan Your Visit</span>
-                <h2 className="font-display text-5xl md:text-7xl mb-8">Reserve <br/> Your Spot</h2>
+                <h2 className="font-display text-3xl sm:text-5xl md:text-7xl mb-8">Reserve <br/> Your Spot</h2>
                 <p className="font-sans text-cream/60 leading-relaxed mb-10 max-w-md">
                    Whether for a romantic evening under the dome or a lively family gathering on the deck, we ensure every moment is memorable.
                 </p>
@@ -281,7 +281,7 @@ const Home: React.FC = () => {
                 </Link>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 border-l border-cream/10 pl-8 md:pl-16">
+            <div className="grid grid-cols-1 gap-6 sm:gap-8 border-l border-cream/10 pl-4 sm:pl-8 md:pl-16">
                 <div>
                     <h3 className="font-display text-2xl mb-2">Location</h3>
                     <p className="font-sans text-cream/60 text-sm leading-relaxed max-w-xs">

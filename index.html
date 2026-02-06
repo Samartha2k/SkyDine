@@ -56,6 +56,28 @@
         cursor: none; /* Hide default cursor for custom one */
       }
 
+      /* Restore default cursor and hide custom cursor on touch devices */
+      @media (hover: none) and (pointer: coarse) {
+        body {
+          cursor: auto;
+        }
+        .cursor-dot,
+        .cursor-outline {
+          display: none !important;
+        }
+      }
+
+      /* Also hide on smaller screens as they are likely mobile */
+      @media (max-width: 768px) {
+        body {
+          cursor: auto;
+        }
+        .cursor-dot,
+        .cursor-outline {
+          display: none !important;
+        }
+      }
+
       /* Custom Scrollbar */
       ::-webkit-scrollbar {
         width: 6px;
@@ -65,6 +87,14 @@
       }
       ::-webkit-scrollbar-thumb {
         background: #D32F2F;
+      }
+
+      /* Hide scrollbar on mobile for cleaner look */
+      @media (max-width: 768px) {
+        ::-webkit-scrollbar {
+          width: 0;
+          display: none;
+        }
       }
 
       /* Cursor Styles */

@@ -44,7 +44,7 @@ const Contact: React.FC = () => {
       initial={{ opacity: 0 }} 
       animate={{ opacity: 1 }} 
       exit={{ opacity: 0 }}
-      className="min-h-screen pt-32 pb-12 bg-void relative overflow-hidden"
+      className="min-h-screen pt-24 sm:pt-32 pb-12 bg-void relative overflow-hidden"
     >
       {/* Background Ambience */}
       <div className="absolute inset-0 z-0">
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
         <div className="absolute inset-0 bg-noise opacity-[0.05]"></div>
       </div>
 
-      <div className="max-w-[1920px] mx-auto px-6 lg:px-24 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
+      <div className="max-w-[1920px] mx-auto px-4 sm:px-6 lg:px-24 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
         
         {/* Left Column: Information & Actions */}
         <div className="flex flex-col py-12">
@@ -67,14 +67,14 @@ const Contact: React.FC = () => {
             transition={{ duration: 0.8 }}
           >
             <span className="font-sans text-xs text-rust uppercase tracking-[0.4em] mb-6 block">Concierge</span>
-            <h1 className="font-display text-6xl md:text-8xl mb-8 text-cream">Get In <br/> <span className="italic text-cream/50">Touch</span></h1>
+            <h1 className="font-display text-4xl sm:text-6xl md:text-8xl mb-6 sm:mb-8 text-cream">Get In <br/> <span className="italic text-cream/50">Touch</span></h1>
             
-            <p className="font-sans text-lg text-cream/70 leading-relaxed max-w-lg mb-12 border-l border-rust pl-6">
+            <p className="font-sans text-base sm:text-lg text-cream/70 leading-relaxed max-w-lg mb-8 sm:mb-12 border-l border-rust pl-4 sm:pl-6">
               For reservations, private dining inquiries, or to simply say hello, our team is at your disposal.
             </p>
 
             {/* Detailed Contact Info */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-10 mb-8 sm:mb-12">
                <div>
                   <h4 className="font-sans text-xs text-rust uppercase tracking-widest mb-4">Address</h4>
                   <p className="font-sans text-cream/80 leading-relaxed text-sm">
@@ -100,27 +100,27 @@ const Contact: React.FC = () => {
             </div>
 
             {/* Action Buttons */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12 max-w-xl">
-              <button onClick={handleDirectCall} className="interactive group flex items-center justify-between p-6 border border-cream/10 bg-cream/5 hover:bg-rust hover:border-rust transition-all duration-500">
+            <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-8 sm:mb-12 max-w-xl">
+              <button onClick={handleDirectCall} className="interactive group flex items-center justify-between p-4 sm:p-6 border border-cream/10 bg-cream/5 hover:bg-rust hover:border-rust transition-all duration-500">
                 <div className="flex flex-col items-start">
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-cream/60 group-hover:text-void/60 mb-2">Voice</span>
-                  <span className="font-display text-xl text-cream group-hover:text-void">Call Now</span>
+                  <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-cream/60 group-hover:text-void/60 mb-1 sm:mb-2">Voice</span>
+                  <span className="font-display text-lg sm:text-xl text-cream group-hover:text-void">Call Now</span>
                 </div>
                 <Phone className="w-5 h-5 text-rust group-hover:text-void" />
               </button>
 
-              <button onClick={() => window.open(`https://wa.me/${RESTAURANT_INFO.whatsappNumber}`, '_blank')} className="interactive group flex items-center justify-between p-6 border border-cream/10 bg-cream/5 hover:bg-[#25D366] hover:border-[#25D366] transition-all duration-500">
+              <button onClick={() => window.open(`https://wa.me/${RESTAURANT_INFO.whatsappNumber}`, '_blank')} className="interactive group flex items-center justify-between p-4 sm:p-6 border border-cream/10 bg-cream/5 hover:bg-[#25D366] hover:border-[#25D366] transition-all duration-500">
                 <div className="flex flex-col items-start">
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-cream/60 group-hover:text-void/60 mb-2">Chat</span>
-                  <span className="font-display text-xl text-cream group-hover:text-void">WhatsApp</span>
+                  <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-cream/60 group-hover:text-void/60 mb-1 sm:mb-2">Chat</span>
+                  <span className="font-display text-lg sm:text-xl text-cream group-hover:text-void">WhatsApp</span>
                 </div>
                 <MessageCircle className="w-5 h-5 text-rust group-hover:text-void" />
               </button>
 
-              <button onClick={handleDirections} className="interactive group flex items-center justify-between p-6 border border-cream/10 bg-cream/5 hover:bg-cream hover:border-cream transition-all duration-500 md:col-span-2">
+              <button onClick={handleDirections} className="interactive group flex items-center justify-between p-4 sm:p-6 border border-cream/10 bg-cream/5 hover:bg-cream hover:border-cream transition-all duration-500 col-span-2">
                  <div className="flex flex-col items-start">
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-cream/60 group-hover:text-void/60 mb-2">Location</span>
-                  <span className="font-display text-xl text-cream group-hover:text-void">Get Directions</span>
+                  <span className="font-sans text-[9px] sm:text-[10px] uppercase tracking-widest text-cream/60 group-hover:text-void/60 mb-1 sm:mb-2">Location</span>
+                  <span className="font-display text-lg sm:text-xl text-cream group-hover:text-void">Get Directions</span>
                 </div>
                 <Navigation className="w-5 h-5 text-rust group-hover:text-void" />
               </button>
@@ -155,7 +155,7 @@ const Contact: React.FC = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="w-full bg-void/40 backdrop-blur-xl border border-cream/10 p-8 md:p-12 relative"
+            className="w-full bg-void/40 backdrop-blur-xl border border-cream/10 p-6 sm:p-8 md:p-12 relative"
           >
             {/* Decorative Corner */}
             <div className="absolute top-0 right-0 w-20 h-20 border-t border-r border-rust/50"></div>

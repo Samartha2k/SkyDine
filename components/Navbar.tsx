@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
         
         {/* Logo */}
         <Link to="/" className="interactive group flex items-center gap-4">
-          <img src="/images/logo.png" alt="Sky Dine Logo" className="h-16 w-auto object-contain" />
+          <img src="/images/logo.png" alt="Sky Dine Logo" className="h-12 sm:h-16 w-auto object-contain" />
           <div className="hidden md:flex flex-col mix-blend-difference">
             <span className="font-display font-bold text-3xl tracking-widest group-hover:text-rust transition-colors duration-500 text-white">
               SKY DINE
@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
             className="interactive flex items-center gap-4 group text-white"
           >
             <span className="hidden md:block font-sans text-xs uppercase tracking-[0.2em] group-hover:text-rust transition-colors">Menu</span>
-            <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center group-hover:bg-rust group-hover:text-void transition-all duration-300 border border-white/20">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center group-hover:bg-rust group-hover:text-void transition-all duration-300 border border-white/20">
               <MenuIcon className="w-5 h-5" />
             </div>
           </button>
@@ -82,7 +82,7 @@ const Navbar: React.FC = () => {
             className="fixed inset-0 z-[60] flex flex-col md:flex-row h-[100dvh]"
           >
             {/* Left Panel: Navigation with deep stained gradient */}
-            <div className="w-full md:w-1/2 h-full flex flex-col justify-between p-6 md:p-12 relative z-20 overflow-y-auto overflow-x-hidden custom-scrollbar bg-gradient-to-br from-[#1a1a1a] via-[#0d0d0d] to-[#000000]">
+            <div className="w-full md:w-1/2 h-full flex flex-col justify-between p-4 sm:p-6 md:p-12 relative z-20 overflow-y-auto overflow-x-hidden custom-scrollbar bg-gradient-to-br from-[#1a1a1a] via-[#0d0d0d] to-[#000000]">
               <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-[0.03] pointer-events-none"></div>
               
               <div className="flex justify-between items-center flex-shrink-0">
@@ -95,7 +95,7 @@ const Navbar: React.FC = () => {
                   </button>
               </div>
 
-              <div className="flex flex-col justify-center gap-2 md:gap-0 lg:gap-1 my-8 md:my-4 flex-grow">
+              <div className="flex flex-col justify-center gap-1 my-4 sm:my-8 md:my-4 flex-grow">
                 {links.map((link, idx) => (
                   <motion.div
                     key={link.path}
@@ -107,7 +107,7 @@ const Navbar: React.FC = () => {
                   >
                     <button 
                       onClick={() => handleNavigation(link.path)}
-                      className="interactive text-left font-display text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-cream/40 group-hover:text-cream transition-colors duration-500 leading-none md:leading-tight py-1 tracking-tight"
+                      className="interactive text-left font-display text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl text-cream/40 group-hover:text-cream active:text-rust transition-colors duration-500 leading-none md:leading-tight py-0.5 sm:py-1 tracking-tight"
                     >
                       {link.name}
                     </button>
@@ -118,7 +118,7 @@ const Navbar: React.FC = () => {
                 ))}
               </div>
 
-              <div className="flex flex-col gap-6 md:gap-0 md:flex-row md:justify-between md:items-end border-t border-cream/10 pt-6 flex-shrink-0">
+              <div className="flex flex-col gap-4 sm:gap-6 md:gap-0 md:flex-row md:justify-between md:items-end border-t border-cream/10 pt-4 sm:pt-6 flex-shrink-0">
                 <div className="flex gap-6 text-cream/30 font-sans text-xs uppercase tracking-widest">
                   <a href="#" className="hover:text-rust transition-colors flex items-center gap-2 group">
                     <Instagram className="w-4 h-4 group-hover:scale-110 transition-transform"/> <span className="hidden lg:inline">Instagram</span>

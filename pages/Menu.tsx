@@ -73,13 +73,13 @@ const Menu: React.FC = () => {
       initial={{ opacity: 0 }} 
       animate={{ opacity: 1 }} 
       exit={{ opacity: 0 }}
-      className="min-h-screen px-6 pt-32 pb-20"
+      className="min-h-screen px-4 sm:px-6 pt-24 sm:pt-32 pb-20"
     >
       <div className="max-w-[1920px] mx-auto">
         
         <header className="text-center mb-16">
           <span className="font-sans text-xs text-rust uppercase tracking-[0.4em] mb-6 block">The Index</span>
-          <h1 className="font-display text-7xl md:text-9xl text-cream mb-8">Culinary</h1>
+          <h1 className="font-display text-5xl sm:text-7xl md:text-9xl text-cream mb-8">Culinary</h1>
           <p className="font-sans text-cream/60 max-w-md mx-auto mb-12">
             A curation of global flavors, bringing together the best of North Indian, Asian, and Continental traditions.
           </p>
@@ -99,11 +99,32 @@ const Menu: React.FC = () => {
             </div>
         </header>
 
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 relative">
+          
+          {/* Mobile Horizontal Category Navigation */}
+          {filteredMenu.length > 0 && (
+            <div className="lg:hidden w-full overflow-x-auto pb-4 -mx-4 px-4">
+              <div className="flex gap-3 min-w-max">
+                {filteredMenu.map((category) => (
+                  <button 
+                    key={category.title}
+                    onClick={() => scrollToCategory(category.title)}
+                    className={`whitespace-nowrap px-4 py-2 rounded-full border font-sans text-xs uppercase tracking-wider transition-all duration-300 ${
+                      activeCategory === category.title 
+                        ? 'bg-rust border-rust text-void' 
+                        : 'border-cream/20 text-cream/60 active:bg-cream/10'
+                    }`}
+                  >
+                    {category.title}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           
           {/* Desktop Left Sidebar Navigation */}
           {filteredMenu.length > 0 && (
-             <aside className="hidden lg:flex w-[25%] flex-col justify-center h-screen sticky top-0 pb-20">
+              <aside className="hidden lg:flex w-[25%] flex-col justify-center h-screen sticky top-0 pb-20">
                <div className="space-y-6 border-l border-cream/5 pl-8 relative">
                  {/* Moving Indicator */}
                  {filteredMenu.map((category) => (
@@ -134,12 +155,12 @@ const Menu: React.FC = () => {
                   className="scroll-mt-32"
                 >
                   <div className="flex items-center gap-8 mb-12">
-                     <h2 className="font-display text-4xl md:text-5xl text-cream shrink-0">{category.title}</h2>
+                  <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-cream shrink-0">{category.title}</h2>
                      <div className="h-[1px] bg-cream/10 w-full"></div>
                      <span className="font-sans text-xs text-rust font-bold">0{idx + 1}</span>
                   </div>
 
-                  <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
+                  <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-8 sm:gap-y-12">
                     <AnimatePresence mode="popLayout">
                       {category.items.map((item) => (
                         <motion.div 
@@ -152,7 +173,7 @@ const Menu: React.FC = () => {
                           className="group interactive"
                         >
                           <div className="flex justify-between items-baseline border-b border-cream/5 pb-2 mb-2 group-hover:border-rust/50 transition-colors">
-                            <h3 className="font-display text-xl text-cream group-hover:text-rust transition-colors">{item.name}</h3>
+                            <h3 className="font-display text-lg sm:text-xl text-cream group-hover:text-rust transition-colors">{item.name}</h3>
                             <span className="font-sans text-sm text-cream/60">{item.price}</span>
                           </div>
                           <p className="font-sans text-sm text-cream/40 leading-relaxed group-hover:text-cream/60 transition-colors">
