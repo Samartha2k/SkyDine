@@ -12,13 +12,13 @@ const OrderOnline: React.FC = () => {
       initial={{ opacity: 0 }} 
       animate={{ opacity: 1 }} 
       exit={{ opacity: 0 }}
-      className="min-h-screen px-6 pt-32 pb-20"
+      className="min-h-screen px-4 sm:px-6 pt-24 sm:pt-32 pb-20"
     >
       <div className="max-w-[1920px] mx-auto">
-        <header className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <header className="mb-12 sm:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-6 sm:gap-8">
            <div className="max-w-2xl">
               <span className="font-sans text-xs text-rust uppercase tracking-[0.4em] mb-4 block">Concierge & Delivery</span>
-              <h1 className="font-display text-6xl md:text-8xl leading-none">Dining <br/> <span className="italic text-cream/50">Gateways</span></h1>
+               <h1 className="font-display text-4xl sm:text-6xl md:text-8xl leading-none">Dining <br/> <span className="italic text-cream/50">Gateways</span></h1>
            </div>
            <p className="font-sans text-cream/40 text-xs uppercase tracking-[0.2em] max-w-xs md:text-right">
              Select a platform to experience Sky Dine's culinary excellence from the comfort of your home.
@@ -26,17 +26,17 @@ const OrderOnline: React.FC = () => {
         </header>
 
         {/* Redesigned Luxury Links Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-cream/10 mb-32 border border-cream/10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-cream/10 mb-16 sm:mb-32 border border-cream/10">
           {orderingLinks.map((link, idx) => (
             <a 
               key={idx} 
               href={link.url} 
               target="_blank" 
               rel="noreferrer"
-              className="interactive group relative min-h-[320px] lg:min-h-[400px] bg-void overflow-hidden flex flex-col justify-between p-8 md:p-16 transition-colors duration-700 hover:bg-[#0c0c0c]"
+              className="interactive group relative min-h-[220px] sm:min-h-[320px] lg:min-h-[400px] bg-void overflow-hidden flex flex-col justify-between p-6 sm:p-8 md:p-16 transition-colors duration-700 hover:bg-[#0c0c0c]"
             >
               {/* Massive Background Numeral */}
-              <div className="absolute -top-10 -right-10 font-display text-[20rem] leading-none text-cream/[0.02] group-hover:text-rust/[0.05] transition-colors duration-1000 pointer-events-none select-none">
+              <div className="absolute -top-10 -right-10 font-display text-[10rem] sm:text-[15rem] md:text-[20rem] leading-none text-cream/[0.02] group-hover:text-rust/[0.05] transition-colors duration-1000 pointer-events-none select-none">
                 0{idx + 1}
               </div>
 
@@ -67,7 +67,7 @@ const OrderOnline: React.FC = () => {
                      Available Now
                    </motion.span>
                 </div>
-                <h3 className="font-display text-5xl md:text-7xl lg:text-8xl text-cream group-hover:translate-x-4 transition-transform duration-700 ease-[0.16,1,0.3,1]">
+                <h3 className="font-display text-3xl sm:text-5xl md:text-7xl lg:text-8xl text-cream group-hover:translate-x-4 transition-transform duration-700 ease-[0.16,1,0.3,1]">
                   {link.name}
                 </h3>
                 
@@ -90,18 +90,18 @@ const OrderOnline: React.FC = () => {
         </div>
 
         {/* Rest of the page preserved exactly as is */}
-        <div className="bg-void border border-cream/10 p-12 lg:p-24 relative overflow-hidden">
+        <div className="bg-void border border-cream/10 p-6 sm:p-12 lg:p-24 relative overflow-hidden">
            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-rust/5 rounded-full blur-[120px] pointer-events-none"></div>
            
-           <h2 className="font-display text-4xl mb-12 relative z-10">Privileges & Offers</h2>
-           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 relative z-10">
+           <h2 className="font-display text-3xl sm:text-4xl mb-8 sm:mb-12 relative z-10">Privileges & Offers</h2>
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 relative z-10">
              {OFFERS.map((offer, idx) => (
-               <div key={idx} className="group hover:bg-cream/5 p-6 -ml-6 rounded-lg transition-colors duration-300">
+               <div key={idx} className="group hover:bg-cream/5 p-4 sm:p-6 -ml-4 sm:-ml-6 rounded-lg transition-colors duration-300">
                  <div className="flex items-baseline gap-4 mb-4 border-b border-cream/10 pb-4">
                     <span className="font-sans text-xs text-rust font-bold">0{idx+1}</span>
                     <h4 className="font-sans text-sm font-bold uppercase tracking-widest text-cream">{offer.title}</h4>
                  </div>
-                 <p className="font-display text-xl mb-3 text-cream/90">{offer.details}</p>
+                 <p className="font-display text-lg sm:text-xl mb-3 text-cream/90">{offer.details}</p>
                  <p className="font-sans text-xs text-cream/40 group-hover:text-cream/60 transition-colors">{offer.conditions}</p>
                </div>
              ))}
