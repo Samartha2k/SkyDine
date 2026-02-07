@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from '@/lib/motion';
 import { MENU } from '../constants';
 import { Search } from 'lucide-react';
 
@@ -154,10 +154,10 @@ const Menu: React.FC = () => {
                   id={category.title}
                   className="scroll-mt-32"
                 >
-                  <div className="flex items-center gap-8 mb-12">
-                  <h2 className="font-display text-3xl sm:text-4xl md:text-5xl text-cream shrink-0">{category.title}</h2>
-                     <div className="h-[1px] bg-cream/10 w-full"></div>
-                     <span className="font-sans text-xs text-rust font-bold">0{idx + 1}</span>
+                  <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8 mb-12">
+                    <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-cream break-words">{category.title}</h2>
+                    <div className="h-[1px] bg-cream/10 flex-1 hidden sm:block"></div>
+                    <span className="font-sans text-xs text-rust font-bold">0{idx + 1}</span>
                   </div>
 
                   <motion.div layout className="grid grid-cols-1 md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-8 sm:gap-y-12">

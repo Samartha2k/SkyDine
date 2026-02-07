@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from '@/lib/motion';
 
 const Gallery: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);

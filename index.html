@@ -4,11 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SKY DINE | The Apex of Taste</title>
-    <meta name="description" content="A premier rooftop dining experience." />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="A premier rooftop dining experience in Vadodara offering North Indian, Chinese, Continental, and Pan-Asian delicacies. Glass dome seating with panoramic city views." />
+    <meta name="keywords" content="Sky Dine, rooftop restaurant Vadodara, fine dining, glass dome restaurant, North Indian cuisine, Pan-Asian food" />
+    <meta name="author" content="Sky Dine Restaurant" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Sky Dine | The Apex of Taste" />
+    <meta property="og:description" content="A premier rooftop dining experience in Vadodara with glass dome seating and panoramic city views." />
+    <meta property="og:image" content="/images/og-image.jpg" />
+    <meta property="og:url" content="https://skydine.com" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sky Dine | The Apex of Taste" />
+    <meta name="twitter:description" content="A premier rooftop dining experience in Vadodara." />
+    <meta name="twitter:image" content="/images/og-image.jpg" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400&family=Jost:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/logo.png" />
+    <link rel="apple-touch-icon" href="/images/logo.png" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -49,119 +73,19 @@
         }
       }
     </script>
-    <style>
-      body {
-        background-color: #0a0a0a;
-        color: #eaddcf;
-        cursor: none; /* Hide default cursor for custom one */
-      }
 
-      /* Restore default cursor and hide custom cursor on touch devices */
-      @media (hover: none) and (pointer: coarse) {
-        body {
-          cursor: auto;
-        }
-        .cursor-dot,
-        .cursor-outline {
-          display: none !important;
-        }
-      }
+    <!-- Styles -->
+    <link rel="stylesheet" href="/index.css">
 
-      /* Also hide on smaller screens as they are likely mobile */
-      @media (max-width: 768px) {
-        body {
-          cursor: auto;
-        }
-        .cursor-dot,
-        .cursor-outline {
-          display: none !important;
-        }
-      }
-
-      /* Custom Scrollbar */
-      ::-webkit-scrollbar {
-        width: 6px;
-      }
-      ::-webkit-scrollbar-track {
-        background: #0a0a0a;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #D32F2F;
-      }
-
-      /* Hide scrollbar on mobile for cleaner look */
-      @media (max-width: 768px) {
-        ::-webkit-scrollbar {
-          width: 0;
-          display: none;
-        }
-      }
-
-      /* Cursor Styles */
-      .cursor-dot,
-      .cursor-outline {
-        position: fixed;
-        top: 0;
-        left: 0;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        z-index: 9999;
-        pointer-events: none;
-      }
-
-      .cursor-dot {
-        width: 8px;
-        height: 8px;
-        background-color: #F8F9FA;
-      }
-
-      .cursor-outline {
-        width: 40px;
-        height: 40px;
-        border: 1px solid rgba(248, 249, 250, 0.5);
-        transition: width 0.2s, height 0.2s, background-color 0.2s;
-      }
-
-      body:hover .cursor-outline.hovered {
-        width: 80px;
-        height: 80px;
-        background-color: rgba(248, 249, 250, 0.1);
-        border-color: #F8F9FA;
-        backdrop-filter: invert(1);
-      }
-
-      /* Selection */
-      ::selection {
-        background: #D32F2F;
-        color: #F8F9FA;
-      }
-      
-      .blend-difference {
-        mix-blend-mode: difference;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react": "https://esm.sh/react@18.2.0",
-    "react/": "https://esm.sh/react@18.2.0/",
-    "react-dom": "https://esm.sh/react-dom@18.2.0",
-    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
-    "react-router-dom": "https://esm.sh/react-router-dom@6.22.3?deps=react@18.2.0,react-dom@18.2.0",
-    "framer-motion": "https://esm.sh/framer-motion@10.16.4?deps=react@18.2.0,react-dom@18.2.0",
-    "lucide-react": "https://esm.sh/lucide-react@0.344.0?deps=react@18.2.0",
-    "react-dom/": "https://esm.sh/react-dom@18.2.0/",
-    "three": "https://esm.sh/three@0.160.0",
-    "three/": "https://esm.sh/three@0.160.0/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+    <!-- Structured Data will be injected by React Helmet -->
+  </head>
   <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
     <!-- Preloader -->
-    <div id="preloader">
-      <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" role="img" aria-label="Loading...">
+    <div id="preloader" role="status" aria-live="polite" aria-label="Loading website">
+      <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" role="img" aria-label="Loading animation">
         <clipPath id="pan-clip">
           <rect rx="12" ry="14" x="4" y="52" width="68" height="28" />
         </clipPath>
@@ -204,38 +128,49 @@
             <rect rx="2" ry="2" x="4" y="66" width="68" height="14" clip-path="url(#pan-clip)" id="pan" />
             <rect rx="2" ry="2" x="76" y="66" width="48" height="7" />
           </g>
-
         </g>
       </svg>
     </div>
-    
+
     <div id="root"></div>
-    <div class="cursor-dot"></div>
-    <div class="cursor-outline"></div>
+
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot" aria-hidden="true"></div>
+    <div class="cursor-outline" aria-hidden="true"></div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Cursor Script -->
     <script>
       const cursorDot = document.querySelector('.cursor-dot');
       const cursorOutline = document.querySelector('.cursor-outline');
 
-      window.addEventListener('mousemove', (e) => {
-        const posX = e.clientX;
-        const posY = e.clientY;
+      // Check if user prefers reduced motion
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        cursorDot.style.left = `${posX}px`;
-        cursorDot.style.top = `${posY}px`;
+      if (!prefersReducedMotion) {
+        window.addEventListener('mousemove', (e) => {
+          const posX = e.clientX;
+          const posY = e.clientY;
 
-        cursorOutline.animate({
-          left: `${posX}px`,
-          top: `${posY}px`
-        }, { duration: 500, fill: "forwards" });
-      });
+          cursorDot.style.left = `${posX}px`;
+          cursorDot.style.top = `${posY}px`;
 
-      document.body.addEventListener('mouseover', (e) => {
-        if (e.target.closest('a') || e.target.closest('button') || e.target.closest('.interactive')) {
-          cursorOutline.classList.add('hovered');
-        } else {
-          cursorOutline.classList.remove('hovered');
-        }
-      });
+          cursorOutline.animate({
+            left: `${posX}px`,
+            top: `${posY}px`
+          }, { duration: 500, fill: "forwards" });
+        });
+
+        document.body.addEventListener('mouseover', (e) => {
+          if (e.target.closest('a') || e.target.closest('button') || e.target.closest('.interactive')) {
+            cursorOutline.classList.add('hovered');
+          } else {
+            cursorOutline.classList.remove('hovered');
+          }
+        });
+      }
 
       // Hide preloader when window loads
       window.addEventListener('load', () => {
@@ -245,8 +180,11 @@
             preloader.style.opacity = '0';
             setTimeout(() => {
               preloader.style.display = 'none';
-            }, 500); // Wait for transition to finish
-          }, 800); // Minimum view time
+              // Focus on skip to content link after loading
+              const skipLink = document.querySelector('.skip-to-content');
+              if (skipLink) skipLink.focus();
+            }, 500);
+          }, 800);
         }
       });
     </script>

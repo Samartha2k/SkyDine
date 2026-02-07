@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '@/lib/motion';
 import { RESTAURANT_INFO, SOCIAL_LINKS } from '../constants';
 import { Phone, MessageCircle, ArrowRight, Navigation } from 'lucide-react';
+import { showError } from '../utils/toast';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const Contact: React.FC = () => {
   const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.message) {
-      alert('Please fill in your Name and Message.');
+      showError('Please fill in your Name and Message.');
       return;
     }
 

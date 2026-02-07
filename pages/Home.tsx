@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion } from '@/lib/motion';
 import { ArrowRight, Star, ChevronDown, UtensilsCrossed } from 'lucide-react';
 import { RESTAURANT_INFO, REVIEWS, OFFERS } from '../constants';
 
@@ -191,12 +191,12 @@ const Home: React.FC = () => {
                   <h3 className="font-display text-3xl mb-4 text-rust">Cuisine</h3>
                   <p className="font-sans text-sm text-cream/60">North Indian, Chinese, and Pan-Asian delicacies prepared with authentic techniques and modern presentation.</p>
                </div>
-               <div className="interactive group relative overflow-hidden rounded-b-[10rem]">
-                 <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070" className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" />
-                 <div className="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-void to-transparent">
-                   <h3 className="font-display text-2xl">The Deck</h3>
-                 </div>
-               </div>
+               <div className="interactive group relative overflow-hidden sm:rounded-b-[10rem]">
+                  <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070" className="w-full aspect-[4/3] sm:aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 bg-gradient-to-t from-void via-void/80 to-transparent">
+                    <h3 className="font-display text-xl sm:text-2xl">The Deck</h3>
+                  </div>
+                </div>
              </div>
           </div>
 

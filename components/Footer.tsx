@@ -95,8 +95,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-end border-t border-cream/5 pt-8">
-          <div className="font-sans text-[10px] uppercase tracking-[0.2em] text-cream/30">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-end border-t border-cream/5 pt-8">
+          <div className="font-sans text-[10px] uppercase tracking-[0.2em] text-cream/30 text-center md:text-left">
             © {new Date().getFullYear()} Sky Dine. All Rights Reserved.
           </div>
           <div className="flex gap-8 mt-4 md:mt-0">

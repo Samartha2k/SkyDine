@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '@/lib/motion';
 import { REVIEWS } from '../constants';
 import { Star } from 'lucide-react';
 

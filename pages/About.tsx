@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '@/lib/motion';
 import { RESTAURANT_INFO } from '../constants';
 
 const About: React.FC = () => {

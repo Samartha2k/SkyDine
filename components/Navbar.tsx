@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from '@/lib/motion';
 import { Menu as MenuIcon, X, ArrowRight, Copy, Check, Instagram, Facebook, Globe } from 'lucide-react';
 import { RESTAURANT_INFO } from '../constants';
 
@@ -47,16 +47,16 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link to="/" className="interactive group flex items-center gap-4">
           <img src="/images/logo.png" alt="Sky Dine Logo" className="h-12 sm:h-16 w-auto object-contain" />
-          <div className="hidden md:flex flex-col mix-blend-difference">
-            <span className="font-display font-bold text-3xl tracking-widest group-hover:text-rust transition-colors duration-500 text-white">
+          <div className="hidden md:flex flex-col">
+            <span className="font-display font-bold text-3xl tracking-widest group-hover:text-rust transition-colors duration-500 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               SKY DINE
             </span>
-            <span className="font-sans text-[10px] uppercase tracking-[0.4em] opacity-80 text-white">Est. 2024</span>
+            <span className="font-sans text-[10px] uppercase tracking-[0.4em] opacity-80 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">Est. 2024</span>
           </div>
         </Link>
 
-        <div className="flex items-center gap-8 mix-blend-difference">
-           <Link to="/order-online" className="interactive hidden md:flex items-center gap-2 font-sans text-xs uppercase tracking-widest hover:text-rust transition-colors border border-white/20 px-6 py-3 rounded-full hover:bg-white hover:text-void hover:border-white text-white">
+        <div className="flex items-center gap-8">
+           <Link to="/order-online" className="interactive hidden md:flex items-center gap-2 font-sans text-xs uppercase tracking-widest hover:text-rust transition-colors border border-white/20 px-6 py-3 rounded-full hover:bg-white hover:text-void hover:border-white text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
              <span>Order Online</span>
            </Link>
            

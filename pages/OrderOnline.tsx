@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from '@/lib/motion';
 import { SOCIAL_LINKS, OFFERS } from '../constants';
 import { ArrowUpRight, ShieldCheck, Globe } from 'lucide-react';
 
