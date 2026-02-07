@@ -191,10 +191,12 @@ const Home: React.FC = () => {
                   <h3 className="font-display text-3xl mb-4 text-rust">Cuisine</h3>
                   <p className="font-sans text-sm text-cream/60">North Indian, Chinese, and Pan-Asian delicacies prepared with authentic techniques and modern presentation.</p>
                </div>
-               <div className="interactive group relative overflow-hidden sm:rounded-b-[10rem]">
-                  <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070" className="w-full aspect-[4/3] sm:aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" />
-                  <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 bg-gradient-to-t from-void via-void/80 to-transparent">
-                    <h3 className="font-display text-xl sm:text-2xl">The Deck</h3>
+               <div className="interactive group relative overflow-visible sm:rounded-b-[10rem]">
+                  <div className="overflow-hidden sm:rounded-b-[10rem]">
+                    <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2070" className="w-full aspect-[4/3] sm:aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105" />
+                  </div>
+                  <div className="absolute bottom-0 left-0 w-full p-4 sm:p-6 bg-gradient-to-t from-void via-void/80 to-transparent z-10 sm:rounded-b-[10rem]">
+                    <h3 className="font-display text-xl sm:text-2xl text-cream drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">The Deck</h3>
                   </div>
                 </div>
              </div>
