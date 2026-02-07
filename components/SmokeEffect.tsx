@@ -27,7 +27,7 @@ const SmokeEffect: React.FC<SmokeEffectProps> = ({ className, isHovered = false 
 
   // Update speed based on hover state
   useEffect(() => {
-    targetSpeedRef.current = isHovered ? 3 : 1; // 3x speed when hovered
+    targetSpeedRef.current = isHovered ? 6 : 2; // 2x base speed (6x when hovered)
   }, [isHovered]);
 
   useEffect(() => {
@@ -83,7 +83,9 @@ const SmokeEffect: React.FC<SmokeEffectProps> = ({ className, isHovered = false 
     // Create smoke particles with individual velocities
     for (let p = 0; p < 50; p++) {
       const particle = new Mesh(smokeGeo, smokeMaterial.clone());
-      const startY = Math.random() * 200 - 300; // Start lower (more negative Y)
+      // Stagger initial Y positions so particles are distributed throughout the animation cycle
+      // Range from -400 (very low, already rising) to 200 (mid-animation)
+      const startY = (p / 50) * 600 - 400;
       
       particle.position.set(
         Math.random() * 500 - 250,
